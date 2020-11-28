@@ -79,7 +79,7 @@
 
 /*** DEVCFG2 ***/
 #pragma config FPLLIDIV =   DIV_2
-#pragma config FPLLMUL =    MUL_24
+#pragma config FPLLMUL =    MUL_20
 #pragma config FPLLODIV =   DIV_2
 #pragma config UPLLEN =     OFF
 #pragma config UPLLIDIV =   DIV_2
@@ -157,12 +157,15 @@ void SYS_Initialize ( void* data )
 
 	GPIO_Initialize();
 
+    CORETIMER_Initialize();
 
 
 
 
     EVIC_Initialize();
 
+	/* Enable global interrupts */
+    __builtin_enable_interrupts();
 
 
 }
