@@ -152,22 +152,17 @@ void SYS_Initialize ( void* data )
     /* Set the SRAM wait states to zero */
     BMXCONbits.BMXWSDRM = 0;
 
-
-
-
 	GPIO_Initialize();
 
     CORETIMER_Initialize();
+    //CAN1_Initialize();
 
-
-
+    ADC_Initialize();
 
     EVIC_Initialize();
 
 	/* Enable global interrupts */
     __builtin_enable_interrupts();
-
-
 }
 
 

@@ -9,12 +9,9 @@ int main ( void )
     SYS_Initialize ( NULL );
     
     CORETIMER_Start();
-
+    
     while ( true )
     {
-        //LED_Toggle();
-        //CORETIMER_DelayMs(1000);
-        //LED_Set();
         SYS_Tasks ( );
     }
     return ( EXIT_FAILURE );
